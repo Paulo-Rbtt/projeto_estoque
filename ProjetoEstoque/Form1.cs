@@ -79,7 +79,6 @@ namespace ProjetoEstoque
 
 
         // Métodos de edição e exclusão não testados
-        // Necessário adicionar 2 botões no formulário: buttonEditar & buttonExcluir
         private void buttonEditar_Click(object sender, EventArgs e)
         {
             // Verifica se alguma linha foi selecionada no dataGridView1
@@ -121,7 +120,7 @@ namespace ProjetoEstoque
                 if (result == DialogResult.Yes)
                 {
                     // Exclui o produto do banco de dados
-                    collection.DeleteOne(p => p.Id == produtoSelecionado.Id);
+                    collection.DeleteOne(p => p.id == produtoSelecionado.id);
 
                     // Atualiza a listagem após a exclusão
                     LoadData();

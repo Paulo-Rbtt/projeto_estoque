@@ -35,6 +35,8 @@
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.buttonEditar = new System.Windows.Forms.Button();
+            this.buttonExcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,10 +58,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(259, 39);
+            this.button1.Location = new System.Drawing.Point(274, 39);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
+            this.button1.Size = new System.Drawing.Size(60, 23);
+            this.button1.TabIndex = 3;
             this.button1.Text = "Adicionar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -77,8 +79,8 @@
             // 
             this.maskedTextBox2.Location = new System.Drawing.Point(186, 41);
             this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(67, 20);
-            this.maskedTextBox2.TabIndex = 5;
+            this.maskedTextBox2.Size = new System.Drawing.Size(82, 20);
+            this.maskedTextBox2.TabIndex = 2;
             // 
             // label3
             // 
@@ -97,12 +99,34 @@
             this.dataGridView1.Size = new System.Drawing.Size(319, 255);
             this.dataGridView1.TabIndex = 7;
             // 
+            // buttonEditar
+            // 
+            this.buttonEditar.Location = new System.Drawing.Point(208, 96);
+            this.buttonEditar.Name = "buttonEditar";
+            this.buttonEditar.Size = new System.Drawing.Size(60, 23);
+            this.buttonEditar.TabIndex = 4;
+            this.buttonEditar.Text = "Editar";
+            this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
+            // 
+            // buttonExcluir
+            // 
+            this.buttonExcluir.Location = new System.Drawing.Point(274, 96);
+            this.buttonExcluir.Name = "buttonExcluir";
+            this.buttonExcluir.Size = new System.Drawing.Size(60, 23);
+            this.buttonExcluir.TabIndex = 5;
+            this.buttonExcluir.Text = "Excluir";
+            this.buttonExcluir.UseVisualStyleBackColor = true;
+            this.buttonExcluir.Click += new System.EventHandler(this.buttonExcluir_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(358, 413);
+            this.Controls.Add(this.buttonExcluir);
+            this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.maskedTextBox2);
@@ -130,6 +154,8 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button buttonEditar;
+        private System.Windows.Forms.Button buttonExcluir;
     }
 }
 

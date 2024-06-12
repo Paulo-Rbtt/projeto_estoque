@@ -163,3 +163,4 @@ C:\Users\Severo\Desktop\ProjetoEstoque\ProjetoEstoque\ProjetoEstoque\obj\Debug\P
 C:\Users\Severo\Desktop\ProjetoEstoque\ProjetoEstoque\ProjetoEstoque\obj\Debug\ProjetoE.534E61DA.Up2Date
 C:\Users\Severo\Desktop\ProjetoEstoque\ProjetoEstoque\ProjetoEstoque\obj\Debug\ProjetoEstoque.exe
 C:\Users\Severo\Desktop\ProjetoEstoque\ProjetoEstoque\ProjetoEstoque\obj\Debug\ProjetoEstoque.pdb
+C:\Users\Severo\Desktop\ProjetoEstoque\ProjetoEstoque\ProjetoEstoque\obj\Debug\ProjetoEstoque.FormEditarProduto.resources
