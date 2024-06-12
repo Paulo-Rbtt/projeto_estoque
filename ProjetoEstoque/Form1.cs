@@ -41,7 +41,7 @@ namespace ProjetoEstoque
             string product_qnt = maskedTextBox2.Text;
 
 
-            //int.TryParse serve para converter o string em inteiro (ideal lockar o campo somente para inteiro)
+            //int.TryParse serve para converter o string em inteiro (ideal lockar o campo somente para inteiro) <-- ver isso
             if (!string.IsNullOrWhiteSpace(product_name) && int.TryParse(product_qnt, out int quantidade))
             {
                 try
@@ -73,6 +73,63 @@ namespace ProjetoEstoque
             else
             {
                 MessageBox.Show("Por favor, inclua um nome de produto válido e uma quantidade numérica.", "Erro",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        // Métodos de edição e exclusão não testados
+        // Necessário adicionar 2 botões no formulário: buttonEditar & buttonExcluir
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            // Verifica se alguma linha foi selecionada no dataGridView1
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Obtém o produto selecionado na linha selecionada
+                produto produtoSelecionado = dataGridView1.SelectedRows[0].DataBoundItem as produto;
+
+                // Abre um novo formulário de edição passando o produto selecionado
+                FormEditarProduto formEditar = new FormEditarProduto(produtoSelecionado);
+                formEditar.ShowDialog();
+
+                // Atualiza a listagem após a edição (se necessário)
+                if (formEditar.ProdutoEditado != null)
+                {
+                    LoadData();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecione um produto para editar.", "Erro",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonExcluir_Click(object sender, EventArgs e)
+        {
+            // Verifica se alguma linha foi selecionada no dataGridView1
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Obtém o produto selecionado na linha selecionada
+                produto produtoSelecionado = dataGridView1.SelectedRows[0].DataBoundItem as produto;
+
+                // Pergunta ao usuário se ele realmente deseja excluir o produto
+                DialogResult result = MessageBox.Show($"Tem certeza que deseja excluir o produto '{produtoSelecionado.nome}'?",
+                    "Confirmação de Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                // Se o usuário confirmar a exclusão, exclui o produto
+                if (result == DialogResult.Yes)
+                {
+                    // Exclui o produto do banco de dados
+                    collection.DeleteOne(p => p.Id == produtoSelecionado.Id);
+
+                    // Atualiza a listagem após a exclusão
+                    LoadData();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecione um produto para excluir.", "Erro",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
