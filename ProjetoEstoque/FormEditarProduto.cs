@@ -76,5 +76,10 @@ namespace ProjetoEstoque
         {
             this.Close();
         }
+
+        private void FormEditarProduto_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

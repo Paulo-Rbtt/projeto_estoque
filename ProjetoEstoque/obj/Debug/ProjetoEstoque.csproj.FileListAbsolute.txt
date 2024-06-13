@@ -220,3 +220,4 @@ C:\Users\tonmo\Documents\Analise e Desenvolvimento de Sistema\03 Sistemas distri
 C:\Users\tonmo\Documents\Analise e Desenvolvimento de Sistema\03 Sistemas distribuídos e mobile\Projeto\projeto_estoque\ProjetoEstoque\obj\Debug\ProjetoE.534E61DA.Up2Date
 C:\Users\tonmo\Documents\Analise e Desenvolvimento de Sistema\03 Sistemas distribuídos e mobile\Projeto\projeto_estoque\ProjetoEstoque\obj\Debug\ProjetoEstoque.exe
 C:\Users\tonmo\Documents\Analise e Desenvolvimento de Sistema\03 Sistemas distribuídos e mobile\Projeto\projeto_estoque\ProjetoEstoque\obj\Debug\ProjetoEstoque.pdb
+C:\Users\joaov\source\repos\ProjetoEstoque\ProjetoEstoque\obj\Debug\ProjetoEstoque.FormEditarProduto.resources

@@ -20,6 +20,8 @@ namespace ProjetoEstoque
             InitializeComponent();
             InitializeDatabase();
             LoadData();
+
+
         }
 
         private void InitializeDatabase()
@@ -33,6 +35,33 @@ namespace ProjetoEstoque
         {
             var listaProdutos = collection.Find(p => true).ToList();
             dataGridView1.DataSource = listaProdutos;
+
+            if (dataGridView1.Columns["id"] != null)
+            {
+                dataGridView1.Columns["id"].Visible = false;
+            }
+
+            if (dataGridView1.Columns["nome"] != null)
+            {
+                dataGridView1.Columns["nome"].HeaderText = "Nome do Produto";
+                dataGridView1.Columns["nome"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dataGridView1.Columns["nome"].FillWeight = 70;
+
+
+            }
+            if (dataGridView1.Columns["quantidade"] != null)
+            {
+                dataGridView1.Columns["quantidade"].HeaderText = "Quantidade";
+                dataGridView1.Columns["quantidade"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dataGridView1.Columns["quantidade"].FillWeight = 30;
+            }
+
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.MultiSelect = false;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.ReadOnly = true;
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -131,6 +160,16 @@ namespace ProjetoEstoque
                 MessageBox.Show("Por favor, selecione um produto para excluir.", "Erro",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
